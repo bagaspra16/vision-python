@@ -32,19 +32,22 @@ def open_browser():
 
 # Scroll halaman web berdasarkan posisi kursor di atas/bawah layar
 def auto_scroll(cursor_y):
-    scroll_threshold_top = 50  # Jarak dari bagian atas layar
-    scroll_threshold_bottom = screen_height - 50  # Jarak dari bagian bawah layar
-    scroll_amount = 800  # Ukuran pergerakan scroll
+    scroll_threshold_top = 150  # Jarak dari bagian atas layar
+    scroll_threshold_bottom = screen_height - 150  # Jarak dari bagian bawah layar
+    scroll_amount = 200  # Ukuran pergerakan scroll
+    scroll_pause = 0.2  # Jeda antar scroll
 
     # Jika kursor berada dekat bagian atas, scroll ke atas
     if cursor_y <= scroll_threshold_top:
-        pyautogui.scroll(scroll_amount)
         print("Scrolling up")
+        pyautogui.scroll(scroll_amount)
+        time.sleep(scroll_pause)  # Jeda untuk menghindari scrolling terlalu cepat
 
     # Jika kursor berada dekat bagian bawah, scroll ke bawah
     elif cursor_y >= scroll_threshold_bottom:
-        pyautogui.scroll(-scroll_amount)
         print("Scrolling down")
+        pyautogui.scroll(-scroll_amount)
+        time.sleep(scroll_pause)  # Jeda untuk menghindari scrolling terlalu cepat
 
 # Gerakan kursor yang lancar dengan interpolasi posisi
 def smooth_cursor_move(cursor_x, cursor_y):
