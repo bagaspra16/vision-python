@@ -1,56 +1,113 @@
-# Modern Hand Gesture for Watch Youtube
+Sure! Here's the English version of your documentation:
 
-Project Computer Vision to Watch Youtube with Hand Gesture Method
+---
+
+# Modern Hand Gesture to Watch YouTube
+
+Computer Vision Project to Control YouTube Using Hand Gestures
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+This guide will help you set up and run the Hand Gesture Control program on various operating systems (macOS, Linux, Windows).
 
 ### Prerequisites
 
-- Python
-- PIP Bash Installer
-- High-End PC/Laptop(Force on your device & felt the heat!)
+* Python 3.7 or higher
+* pip (Python package manager)
+* A working camera with proper permission granted
 
-### Installing
+### Automatic Setup (Recommended)
 
-1. Clone the repository:
+1. **Clone the repository:**
 
    ```bash
    git clone https://github.com/bagaspra16/vision-python.git
+   cd vision-python
+   ```
 
-2. Navigate into the project directory:
-
-    ```bash
-    cd project-name
-
-3. Install library computer vision:
+2. **Run the setup script:**
 
    ```bash
-   pip install opencv-python
-   
-4. Install library mediapipe:
+   bash setup.sh
+   ```
+
+   Optional for Linux/macOS users:
 
    ```bash
-   pip install mediapipe
+   chmod +x setup.sh && ./setup.sh
+   ```
 
-5. Install library pyautogui:
+   This script will:
+
+   * Create a virtual environment (`gesture_env`)
+   * Activate the virtual environment
+   * Install all dependencies from `Requirements.txt`
+   * Perform additional OS-specific setup (e.g., install `alsa-utils` on Linux)
+
+3. **Activate the virtual environment (if not already):**
+
+   * **macOS/Linux:**
+
+     ```bash
+     source gesture_env/bin/activate
+     ```
+   * **Windows (Git Bash/PowerShell):**
+
+     ```bash
+     source gesture_env/Scripts/activate
+     ```
+
+4. **Run the program:**
 
    ```bash
-   pip install pyautogui
+   python3 main.py
+   ```
 
-6. Install library webbrowser:
+### Manual Setup (Alternative)
+
+1. Create and activate the virtual environment:
 
    ```bash
-   pip install webbrowser
+   python3 -m venv gesture_env
+   source gesture_env/bin/activate  # macOS/Linux
+   # or
+   source gesture_env/Scripts/activate  # Windows
+   ```
 
+2. Install all dependencies:
 
-### Running Project
+   ```bash
+   pip install --upgrade pip
+   pip install -r Requirements.txt
+   ```
 
-```bash
-py main.py
-```
+### Controls & Usage
 
-### How to Use!!!
+Once the program is running, you can control your computer using hand gestures in front of the camera:
 
-Find the information of every function to understand how it works.
+* **Open all fingers of the right hand:** Open browser (YouTube)
+* **All fingers of right hand open:** Move the mouse cursor
+* **Only the index finger extended:** Left click
+* **Distance between both hands:** Control volume (farther = increase, closer = decrease)
+* **Make a fist with the right hand for 5 seconds:** Exit the program
+* **Move hand up/down on the screen:** Auto-scroll the page
+* **Press 'q' key on keyboard:** Quit the application
+
+**Notes:**
+
+* Make sure the camera is granted access in your OS settings.
+* On Linux, ensure `alsa-utils` is installed for volume control to work.
+* On macOS, you may need to allow camera and input control access via System Preferences.
+
+### Troubleshooting
+
+* If the camera is not detected, ensure it's not being used by another application.
+* If gestures aren't responsive, ensure proper lighting and that your hand is clearly visible to the camera.
+* For library-related errors, make sure all dependencies are installed in the virtual environment.
+
+---
+
+This program uses OpenCV, MediaPipe, pyautogui, and other libraries to detect hand gestures and control the computer cross-platform.
+
+---
+

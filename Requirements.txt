@@ -1,0 +1,15 @@
+opencv-python==4.8.1.78
+mediapipe==0.10.7
+pyautogui==0.9.54
+numpy==1.24.3
+
+# Platform-specific dependencies (install as needed)
+# For macOS audio control:
+# osascript (built-in)
+
+# For Linux audio control:
+# alsa-utils (install via: sudo apt-get install alsa-utils)
+
+# Optional for better performance:
+# pillow==10.0.1
+# scipy==1.11.4
