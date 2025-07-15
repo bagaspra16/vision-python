@@ -1,7 +1,3 @@
-Sure! Here's the English version of your documentation:
-
----
-
 # Modern Hand Gesture to Watch YouTube
 
 Computer Vision Project to Control YouTube Using Hand Gestures
