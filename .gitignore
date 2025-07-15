@@ -1,0 +1,17 @@
+# .gitignore
+venv/
+gesture_env/
+__pycache__/
+*.pyc
+*.so
+*.dylib
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+*.egg
+*.whl
+*.log
+*.db
+*.sqlite3       

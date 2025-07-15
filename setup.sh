@@ -84,7 +84,7 @@ case "$(uname -s)" in
         ;;
 esac
 echo "2. Run the program:"
-echo "   python3 gesture_control.py"
+echo "   python3 main.py"
 echo ""
 echo "Controls:"
 echo "- Open all fingers on right hand: Open browser"
